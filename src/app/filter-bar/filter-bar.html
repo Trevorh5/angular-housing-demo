@@ -1,0 +1,25 @@
+<section>
+  <h2>Search the available homes.</h2>
+
+  <form [formGroup]="filterForm" (submit)="onSubmit()">
+
+    <button class="clear-button">X</button>
+    
+    <label>
+      Name
+      <input type="text" placeholder="Enter listing name" formControlName="name" />
+    </label>
+
+    <label>
+      City
+      <input class="short-input" type="text" placeholder="Enter city" formControlName="city" />
+    </label>
+
+    <label>
+      State
+      <input class="extra-short-input uppercase" maxlength="2" type="text" placeholder="Enter state code" formControlName="state" />
+    </label>
+
+    <button class="search-button" type="submit">Search</button>
+  </form>
+</section>

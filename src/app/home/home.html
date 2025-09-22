@@ -1,0 +1,10 @@
+<section>
+  <app-filter-bar (search)="onSearch($event)"></app-filter-bar>
+</section>
+<section class="results">
+  @for(housingLocation of filteredLocationList; track $index) {
+    <app-housing-location
+      [housingLocation]="housingLocation"
+    ></app-housing-location>
+  }
+</section>
